@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/promt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="卡信息"
+        android:textSize="25sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:text="00100001001"
+            android:id="@+id/et_checkPointNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="巡检位置序号"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_numSub1"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:text="序号减1" />
+
+        <Button
+            android:id="@+id/bt_numAdd1"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:text="序号加1" />
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="15dp"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onWriteNFC"
+        android:text="写入NFC卡" />
+</LinearLayout> 
